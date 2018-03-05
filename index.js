@@ -56,7 +56,10 @@ const schema = buildSchema(`
     }
 
     type WeaponTypeDef {
+        "Weapon type unique identifier"
         wep_type_id: Int
+
+        "Weapon type corresponding name"
         name: String
     }
 
@@ -95,7 +98,7 @@ const schema = buildSchema(`
 loadDatabase()
 .then((db) => {
     const app = express()
-    app.use('/graphql', graphqlHTTP({
+    app.use('/mhw-gql', graphqlHTTP({
         schema,
         rootValue: require('./schema')(db),
         graphiql: true
