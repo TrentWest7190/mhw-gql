@@ -1,0 +1,16 @@
+[
+    { "wep_type_id": 1, "name": "Hammer"},
+    { "wep_type_id": 2, "name": "Great Sword"},
+    { "wep_type_id": 3, "name": "Sword & Sheild"},
+    { "wep_type_id": 4, "name": "Dual Blades"},
+    { "wep_type_id": 5, "name": "Long Sword"},
+    { "wep_type_id": 6, "name": "Hunting Horn"},
+    { "wep_type_id": 7, "name": "Lance"},
+    { "wep_type_id": 8, "name": "Gunlance"},
+    { "wep_type_id": 9, "name": "Switch Axe"},
+    { "wep_type_id": 10, "name": "Charge Blade"},
+    { "wep_type_id": 11, "name": "Insect Glaive"},
+    { "wep_type_id": 12, "name": "Bow"},
+    { "wep_type_id": 13, "name": "Light Bowgun"},
+    { "wep_type_id": 14, "name": "Heavy Bowgun"}
+]
