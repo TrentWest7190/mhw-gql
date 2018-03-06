@@ -14,6 +14,14 @@ module.exports = function generateSchema(db) {
 
         weaponTypeDefs() {
             return db.weaponTypeDefs
+        },
+
+        skill({ skill_id }) {
+            return db.skills.find((skill) => skill.skill_id === skill_id)
+        },
+
+        allSkills() {
+            return db.skills
         }
     }
 }

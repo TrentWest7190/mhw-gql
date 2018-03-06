@@ -9,6 +9,8 @@ const schema = buildSchema(`
         allWeapons: [Weapon]
         filterWeapons(filter: filterType!): [Weapon]
         weaponTypeDefs: [WeaponTypeDef]
+        skill(skill_id: Int!): Skill
+        allSkills: [Skill]
     }
 
     type Weapon {
@@ -61,6 +63,9 @@ const schema = buildSchema(`
 
         "Weapon type corresponding name"
         name: String
+
+        "Value used to bloat true attack value"
+        multiplier: Float
     }
 
     type Sharpness {
@@ -87,6 +92,40 @@ const schema = buildSchema(`
 
         "Hits of white sharpness"
         white: Int
+    }
+
+    type Skill {
+        "Unique identifier for skill"
+        skill_id: Int
+
+        "Skill name"
+        name: String
+
+        "Skill description"
+        description: String
+
+        "Maximum number of levels for a skill"
+        levels: Int
+
+        "Changes to character stats per level of the skill"
+        values: [SkillValue]
+    }
+
+    type SkillValue {
+        "Level of skill"
+        level: Int
+
+        "Increase to true attack"
+        attack: Int
+
+        "Increase to weapon affinity"
+        affinity: Int
+
+        "Sets the critical hit multiplier to the value"
+        critMulti: Float
+
+        "Adds an attack multiplier to your true attack"
+        attackMulti: Float
     }
 
     input filterType {
