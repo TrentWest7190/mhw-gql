@@ -11,6 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.2",
     "express": "^4.16.2",
     "express-graphql": "^0.6.12",
     "fs-extra": "^5.0.0",
